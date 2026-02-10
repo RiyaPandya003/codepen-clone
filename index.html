@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodePen Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ================= TOP BAR ================= -->
+  <header class="topbar">
+    <div class="left">
+      <h1 contenteditable="true" aria-label="Project title">Untitled</h1>
+      <span class="user">Guest</span>
+    </div>
+
+    <div class="right">
+      <button class="btn" id="toggleConsole" type="button">
+        Console
+      </button>
+
+      <!-- Planned features -->
+      <button
+        class="btn disabled"
+        type="button"
+        title="Planned feature — auto-save is enabled"
+        disabled
+      >
+        ☁ Save
+      </button>
+
+      <button
+        class="btn disabled"
+        type="button"
+        title="Planned feature"
+        disabled
+      >
+        ⚙ Settings
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= EDITORS ================= -->
+  <section class="editors-row">
+    <!-- HTML Editor -->
+    <div class="editor-panel">
+      <div class="editor-header html">HTML</div>
+      <textarea id="html" spellcheck="false"></textarea>
+    </div>
+
+    <div class="col-resizer" aria-hidden="true"></div>
+
+    <!-- CSS Editor -->
+    <div class="editor-panel">
+      <div class="editor-header css">CSS</div>
+      <textarea id="css" spellcheck="false"></textarea>
+    </div>
+
+    <div class="col-resizer" aria-hidden="true"></div>
+
+    <!-- JS Editor -->
+    <div class="editor-panel">
+      <div class="editor-header js">JS</div>
+      <textarea id="js" spellcheck="false"></textarea>
+    </div>
+  </section>
+
+  <!-- ================= EDITORS ↕ PREVIEW ================= -->
+  <div class="row-resizer" aria-hidden="true"></div>
+
+  <!-- ================= PREVIEW ================= -->
+  <section class="preview">
+    <iframe
+      id="output"
+      title="Live preview"
+      sandbox="allow-scripts allow-same-origin"
+    ></iframe>
+  </section>
+
+  <!-- ================= CONSOLE RESIZER ================= -->
+  <div class="console-resizer" aria-hidden="true"></div>
+
+  <!-- ================= CONSOLE ================= -->
+  <section class="bottombar">
+    <div class="console">
+      <div class="console-header">
+        <span>Console</span>
+        <button id="clearConsole" type="button">Clear</button>
+      </div>
+
+      <div class="console-body" id="consoleOutput"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
