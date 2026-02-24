@@ -3,10 +3,6 @@
 A browser-based CodePen-like editor built using vanilla JavaScript.  
 The project focuses on layout engineering, resizing logic, and sandboxed code execution.
 
-#Project-link
-
-codepen-clone-html-css-js.netlify.app
-
 ## Features
 
 - Live HTML, CSS, and JavaScript preview
